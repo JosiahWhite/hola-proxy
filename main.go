@@ -9,7 +9,6 @@ import (
 	"io/ioutil"
 	"log"
 	"net"
-	"net/http"
 	"net/url"
 	"os"
 	"time"
@@ -190,9 +189,10 @@ func run() int {
 	requestDialer := NewPlaintextDialer(endpoint.NetAddr(), endpoint.TLSName, caPool, dialer)
 	mainLogger.Info("Endpoint: %s", endpoint.URL().String())
 	mainLogger.Info("Starting proxy server...")
+
 	handler := NewProxyHandler(handlerDialer, requestDialer, auth, resolver, proxyLogger)
 	mainLogger.Info("Init complete.")
-	err = http.ListenAndServe(args.bind_address, handler)
+	err = handler.Start(args.bind_address)
 	mainLogger.Critical("Server terminated with a reason: %v", err)
 	mainLogger.Info("Shutting down...")
 	return 0

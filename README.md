@@ -39,7 +39,7 @@ git clone https://ipfs.io/ipns/k51qzi5uqu5dkrgx0hozpy1tlggw5o0whtquyrjlc6pprhvbm
 
 #### Binaries
 
-Pre-built binaries are available [here](https://github.com/Snawoot/hola-proxy/releases/latest).
+Pre-built binaries are available [here](https://github.com/JosiahWhite/hola-proxy/releases/latest).
 
 Don't forget to make file executable on Unix-like systems (Linux, MacOS, \*BSD, Android). For your convenience rename downloaded file to `hola-proxy` and run within directory where you placed it:
 
@@ -173,4 +173,4 @@ zagent248.hola.org,165.22.65.3,22222,22223,22224,22225,22226,digitalocean
 
 ## See also
 
-* [Project wiki](https://github.com/Snawoot/hola-proxy/wiki)
+* [Project wiki](https://github.com/JosiahWhite/hola-proxy/wiki)
